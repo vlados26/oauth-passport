@@ -6,19 +6,19 @@ Implement Passport.js GoogleStrategy: http://www.passportjs.org/packages/passpor
 
 Loggin flow in current app:
 1. Press Gooogle+ button
-2. 
+2. Google button goes to "auth/google", '/auth' handles it
 ```js 
 // app.js
 app.use('/auth', authRoutes);
 ```
-3. 
+3. '/google' handles next routing step
 ```js
 // auth-routes.js
 router.get('/google', passport.authenticate('google', {
     scope: ['profile']
 }));
 ```
-4. 
+4. new GoogleStrategy take cares about saving cookie, saving new user or proceed with existing ones
 ```js
 // passport-setup.js 
 import passport from 'passport';
@@ -67,14 +67,14 @@ passport.use(
     })
 );
 ```
-5. 
+5. Came here because 'callbackURL' is '/google/redirect' and redirecting to '/profile'
 ```
 // auth-routes.js
 router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
     res.redirect('/profile');
 });
 ```
-6. 
+6. Send info to browser about user
 ```
 // profile-routes.js
 router.get('/', authCheck, (req, res) => {
