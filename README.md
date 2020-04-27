@@ -1,11 +1,8 @@
 # Oauth with Passport GoogleStrategy Oauth2.0
 
-Create db in:
-https://mlab.com/databases/oauth/collections/users
-Create Google+ OAuth 2.0 key
-http://www.passportjs.org/packages/passport-google-oauth2/
-Implement Passport.js GoogleStrategy:
-http://www.passportjs.org/packages/passport-google-oauth2/
+Create db in: https://mlab.com/databases/oauth/collections/users <br>
+Create Google+ OAuth 2.0 key: http://www.passportjs.org/packages/passport-google-oauth2/ <br>
+Implement Passport.js GoogleStrategy: http://www.passportjs.org/packages/passport-google-oauth2/ <br>
 
 Loggin flow in current app:
 1. Press Gooogle+ button
