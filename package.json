@@ -1,0 +1,27 @@
+{
+    "name": "auth",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "start": "nodemon --exec babel-node app.js",
+        "build": "babel . -d .dist --ignore=\"node_modules\"",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "cookie-session": "^1.4.0",
+        "ejs": "^3.0.2",
+        "express": "^4.17.1",
+        "mongoose": "^5.9.10",
+        "passport": "^0.4.1",
+        "passport-google-oauth20": "^2.0.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.9.0",
+        "@babel/node": "^7.8.7",
+        "@babel/preset-env": "^7.9.5",
+        "nodemon": "^2.0.3"
+    }
+}
