@@ -70,6 +70,20 @@ passport.use(
     })
 );
 ```
-5. auth-routes.js router.get('/google/redirect'
-6. profile-routes.js `router.get('/', ...`
+5. 
+```
+// auth-routes.js
+router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
+    res.redirect('/profile');
+});
+```
+6. 
+```
+// profile-routes.js
+router.get('/', authCheck, (req, res) => {
+    res.render('profile', {
+        user: req.user
+    })
+});
+```
 7. Logged In
