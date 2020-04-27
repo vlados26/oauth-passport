@@ -11,6 +11,7 @@ Loggin flow in current app:
 1. Press Gooogle+ button
 2. 
 ```js 
+// app.js
 app.use('/auth', authRoutes);
 ```
 3. auth-routes.js `router.get('/google', ...`
